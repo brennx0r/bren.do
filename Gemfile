@@ -15,5 +15,6 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 #Cucumber for TDD
 group :test do
+  gem 'watir-webdriver'
   gem 'cucumber'
 end
