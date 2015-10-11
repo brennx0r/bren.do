@@ -18,4 +18,5 @@ Feature: Ensure that a simple index.html page is created
     When I visit index.html
     Then I should see a link called "sketchnotes" on the page
     And I should see a link called "code" on the page
-    And I should see a link called "twitter" on the page    
+    And I should see a link called "twitter" on the page
+    And I should see a link for a "hello@bren.do" mail address on the page    
