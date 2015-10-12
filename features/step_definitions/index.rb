@@ -1,19 +1,41 @@
 Given(/^that a Firefox browser is started$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  require 'watir-webdriver'
+  @b = Watir::Browser.new
 end
 
 When(/^I visit index\.html$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  @b.goto 'http://localhost:4567/'
 end
 
-Then(/^I should see the header value "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see the header value bren\.do$/) do
+  @b.text.include? 'bren.do'
 end
 
-Then(/^I should see a monster image$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see a link called sketchnotes on the page$/) do
+  l = @b.link :text => 'sketchnotes'
+  l.exists?
+  l.click
 end
 
-Then(/^I should see a link called "([^"]*)" on the page$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see a link called code on the page$/) do
+  l = @b.link :text => 'code'
+  l.exists?
+  l.click
 end
+
+Then(/^I should see a link called twitter on the page$/) do
+  l = @b.link :text => 'twitter'
+  l.exists?
+  l.click
+end
+
+Then(/^I should see a link for a hello@bren\.do mail address on the page$/) do
+  l = @b.link :text => 'hello@bren\.do'
+  l.exists?
+  l.click
+end
+
+Then(/^close the browser$/) do
+  @b.close
+end
+

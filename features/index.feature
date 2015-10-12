@@ -6,17 +6,14 @@ Feature: Ensure that a simple index.html page is created
   Scenario: Visiting index.html and looking at the header for the page
     Given that a Firefox browser is started
     When I visit index.html
-    Then I should see the header value "bren.do"
-
-  Scenario: Visiting index.html and looking at a cute monster image on the page
-    Given that a Firefox browser is started
-    When I visit index.html
-    Then I should see a monster image
+    Then I should see the header value bren.do
+    Then close the browser
 
   Scenario: Visiting index.html and looking at the links
     Given that a Firefox browser is started
     When I visit index.html
-    Then I should see a link called "sketchnotes" on the page
-    And I should see a link called "code" on the page
-    And I should see a link called "twitter" on the page
-    And I should see a link for a "hello@bren.do" mail address on the page    
+    Then I should see a link called sketchnotes on the page
+    And I should see a link called code on the page
+    And I should see a link called twitter on the page
+    And I should see a link for a hello@bren.do mail address on the page
+    Then close the browser 
