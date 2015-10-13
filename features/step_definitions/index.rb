@@ -3,7 +3,7 @@ Given(/^that a headless instance is started$/) do
   require 'headless'
   headless = Headless.new
   headless.start
-  @b = Watir::Browser.start
+  @b = Watir::Browser.new
 end
 
 When(/^I visit index\.html$/) do
