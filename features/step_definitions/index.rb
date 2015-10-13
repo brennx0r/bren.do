@@ -1,4 +1,4 @@
-Given(/^that a Firefox browser is started$/) do
+Given(/^that a headless instance is started$/) do
   require 'watir-webdriver'
   require 'headless'
   headless = Headless.new
