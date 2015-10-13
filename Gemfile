@@ -18,6 +18,3 @@ group :test do
   gem 'watir-webdriver'
   gem 'cucumber'
 end
-
-# RAKE
-gem "rake", "~> 10.4.2"
