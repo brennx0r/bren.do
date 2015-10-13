@@ -1,7 +1,7 @@
 task default: %w[test]
 
 task :test do
-  puts "\nBuilding project"
+  puts "\nBuilding project..."
   try "middleman server &>/dev/null &"
   try "sleep 2"
   try "cucumber"
@@ -10,7 +10,7 @@ task :test do
 end
 
 task :TravisTest do
-  puts "\nBuilding project"
+  puts "\nBuilding project in Travis-CI..."
   try "middleman server &>/dev/null &"
   try "sleep 2"
   try "cucumber"
