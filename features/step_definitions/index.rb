@@ -1,6 +1,9 @@
 Given(/^that a Firefox browser is started$/) do
   require 'watir-webdriver'
-  @b = Watir::Browser.new
+  require 'headless'
+  headless = Headless.new
+  headless.start
+  @b = Watir::Browser.start
 end
 
 When(/^I visit index\.html$/) do

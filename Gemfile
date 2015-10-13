@@ -15,6 +15,7 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 # Cucumber for TDD
  gem 'watir-webdriver'
+ gem 'headless'
  gem 'cucumber'
 
 # Rake

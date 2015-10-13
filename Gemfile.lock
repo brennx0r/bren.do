@@ -53,6 +53,7 @@ GEM
     gherkin3 (3.1.2)
     haml (4.0.7)
       tilt
+    headless (2.2.0)
     hike (1.2.3)
     hooks (0.4.1)
       uber (~> 0.0.14)
@@ -155,6 +156,7 @@ PLATFORMS
 
 DEPENDENCIES
   cucumber
+  headless
   middleman (~> 3.4.0)
   middleman-livereload (~> 3.1.0)
   rake
