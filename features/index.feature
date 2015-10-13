@@ -4,13 +4,13 @@ Feature: Ensure that a simple index.html page is created
   I should be able to run each of the scenarios below and see that the steps pass.
  
   Scenario: Visiting index.html and looking at the header for the page
-    Given that a Firefox browser is started
+    Given that a headless instance is started
     When I visit index.html
     Then I should see the header value bren.do
     Then close the browser
 
   Scenario: Visiting index.html and looking at the links
-    Given that a Firefox browser is started
+    Given that a headless instance is started
     When I visit index.html
     Then I should see a link called sketchnotes on the page
     And I should see a link called code on the page
