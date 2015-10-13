@@ -9,6 +9,13 @@ task :test do
   try "kill -q $(ps aux | grep middleman)"
 end
 
+task :TravisTest do
+  puts "\nBuilding project"
+  try "middleman server &>/dev/null &"
+  try "sleep 2"
+  try "cucumber"
+end
+
 task :deploy do
   puts "\nCopying GitHub-specific files"
   try "cp -rv ./github/* ./build/"
@@ -19,7 +26,7 @@ end
 
 namespace :travis do
   task :script do
-    Rake::Task["test"].invoke
+    Rake::Task["TravisTest"].invoke
   end
 
   task :after_success do
