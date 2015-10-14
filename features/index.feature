@@ -9,11 +9,26 @@ Feature: Ensure that a simple index.html page is created
     Then I should see the header value bren.do
     Then close the browser
 
-  Scenario: Visiting index.html and looking at the links
+  Scenario: Visiting index.html and clicking through to sketchnotes should resolve
     Given that a browser instance is started
     When I visit index.html
     Then I should see a link called sketchnotes on the page
+    Then close the browser
+
+  Scenario: Visiting index.html and clicking through to code should resolve
+    Given that a browser instance is started
+    When I visit index.html
     And I should see a link called code on the page
+    Then close the browser   
+
+  Scenario: Visiting index.html and clicking through to twitter should resolve
+    Given that a browser instance is started
+    When I visit index.html
     And I should see a link called twitter on the page
+    Then close the browser 
+
+  Scenario: Visiting index.html and clicking through to hello@bren.do should resolve
+    Given that a browser instance is started
+    When I visit index.html
     And I should see a link for a hello@bren.do mail address on the page
     Then close the browser 

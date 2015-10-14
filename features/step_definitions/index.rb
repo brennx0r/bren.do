@@ -40,7 +40,7 @@ Then(/^I should see a link called twitter on the page$/) do
 end
 
 Then(/^I should see a link for a hello@bren\.do mail address on the page$/) do
-  l = @b.link :text => 'hello@bren\.do'
+  l = @b.link :text => 'hello@bren.do'
   l.exists?
   l.click
 end
