@@ -1,6 +1,8 @@
 task default: %w[test]
 
 task :test do
+  ENV["environment"] = 'firefox'
+  puts "Environment used in the run: "+ENV["environment"]
   puts "\nBuilding project..."
   try "middleman server &>/dev/null &"
   try "sleep 2"
@@ -10,6 +12,8 @@ task :test do
 end
 
 task :TravisTest do
+  ENV["environment"] = 'headless'
+  puts "Environment used in the run: "+ENV["environment"]
   puts "\nBuilding project in Travis-CI..."
   try "middleman server &>/dev/null &"
   try "sleep 2"

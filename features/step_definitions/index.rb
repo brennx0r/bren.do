@@ -1,9 +1,16 @@
-Given(/^that a headless instance is started$/) do
+Given(/^that a browser instance is started$/) do
   require 'watir-webdriver'
   require 'headless'
-  headless = Headless.new
-  headless.start
-  @b = Watir::Browser.new
+  
+  
+  if ENV["environment"] == 'headless'
+  	then
+	  headless = Headless.new
+	  headless.start
+	  @b = Watir::Browser.new
+	else
+	  @b = Watir::Browser.new
+	end
 end
 
 When(/^I visit index\.html$/) do
