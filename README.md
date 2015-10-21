@@ -1,4 +1,5 @@
 # bren.do
+![](https://travis-ci.org/brennx0r/bren.do.svg?branch=master)
 ##WHAT FOR BREN.DO?!
 bren.do is a personal website built in Middleman, with tests built 
 using Cucumber and water-webdriver.
@@ -13,6 +14,3 @@ Locally, if you run the rake test task, Cucumber tests will be run using your lo
 default browser. If you run the rake TravisTest task, a "headless" browser will be run instead.
 
 By default, all Travis-CI builds will run Cucumber tests in headless mode.
-
-## Travis-CI Info
-**Current Build Status:**  ![](https://travis-ci.org/brennx0r/bren.do.svg?branch=master)
