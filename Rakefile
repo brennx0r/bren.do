@@ -5,10 +5,7 @@ task :test do
   puts "Environment used in the run: "+ENV["environment"]
   puts "\nBuilding project..."
   try "middleman server &>/dev/null &"
-  try "sleep 2"
   try "cucumber"
-  try "sleep 5"
-  try "kill -q $(ps aux | grep middleman)"
 end
 
 task :TravisTest do
@@ -16,7 +13,6 @@ task :TravisTest do
   puts "Environment used in the run: "+ENV["environment"]
   puts "\nBuilding project in Travis-CI..."
   try "middleman server &>/dev/null &"
-  try "sleep 2"
   try "cucumber"
 end
 
