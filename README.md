@@ -1,5 +1,8 @@
 # bren.do
 ![](https://travis-ci.org/brennx0r/bren.do.svg?branch=master)
+
+More build information via https://travis-ci.org/brennx0r/bren.do
+
 ##WHAT FOR BREN.DO?!
 bren.do is a personal website built in Middleman, with tests built 
 using Cucumber and water-webdriver.
