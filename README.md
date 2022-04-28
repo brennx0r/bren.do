@@ -3,14 +3,14 @@
 
 More build information via https://travis-ci.org/brennx0r/bren.do
 
-##WHAT FOR BREN.DO?!
+## WHAT FOR BREN.DO?!
 bren.do is a personal website built in Middleman, with tests built 
 using Cucumber and water-webdriver.
 
 The site has not yet been deployed, but will exist as http://bren.do
 
 ## Cucumber
-###Usage
+### Usage
 Right now, Cucumber/watir-webdriver tests are used for integration testing.
 
 Locally, if you run the rake test task, Cucumber tests will be run using your local system's
